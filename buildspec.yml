@@ -8,7 +8,7 @@ phases:
     commands:
       - echo "Build started on `date`"
       - mkdir -p output
-      - cp -r index.html output/
+      - cp -r index.html appspec.yml scripts/ output/
   post_build:
     commands:
       - cd output
@@ -18,3 +18,4 @@ artifacts:
   files:
     - webapp.zip
   discard-paths: yes
+
