@@ -3,12 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Install step (none required)"
+      - echo "Installing dependencies (if any)"
   build:
     commands:
       - echo "Build started on `date`"
       - mkdir -p output
-      - cp -r index.html appspec.yml scripts/ output/
+      - cp -r index.html appspec.yml scripts output/
   post_build:
     commands:
       - cd output
@@ -18,4 +18,5 @@ artifacts:
   files:
     - webapp.zip
   discard-paths: yes
+
 
